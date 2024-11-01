@@ -1,0 +1,35 @@
+header{
+    background-color: blue;
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100vw;
+}
+
+nav{
+    height: 100px;
+    display: flex;
+}
+
+#logo{
+    height: 100%;
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+}
+
+nav li{
+    margin-top: 40px;
+    padding: 0 35px;
+    border: 2px solid black;
+}
+footer{
+    text-align: center;
+}
+
+h4{
+    text-transform: uppercase;
+    color: blue;
+}
