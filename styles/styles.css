@@ -1,32 +1,36 @@
 header{
-    background-color: blue;
     position: sticky;
     top: 0;
     left: 0;
     width: 100vw;
+    height: 130px;
 }
 
-nav{
-    height: 100px;
-    display: flex;
+.navbar-logo {
+    height: 100%; 
+    width: auto; 
+    object-fit: contain; 
 }
 
-#logo{
-    height: 100%;
+h1{
+    font-size: 3rem;
+    text-align: center;
 }
 
-nav ul{
-    list-style: none;
-    display: flex;
+h2{
+    font-size: 3rem;
+    text-align: center;
 }
 
-nav li{
-    margin-top: 40px;
-    padding: 0 35px;
-    border: 2px solid black;
-}
 footer{
     text-align: center;
+}
+
+.footer-line{
+    width: 100vw;
+    height: 5px;
+    margin: 10px 0;
+    background-color: blue;
 }
 
 h4{
