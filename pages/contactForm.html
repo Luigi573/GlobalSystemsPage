@@ -51,9 +51,9 @@
                 </div>
     
                 <div class="form-group row">
-                    <label for="input" class="col-sm-2 col-form-label">Tipo de Servicio:</label>
-                    <select id="Servicio" class="custom-select col-sm-10" required>
-                      <option value="">Open this select menu</option>
+                    <label for="inputService" class="col-sm-2 col-form-label">Tipo de Servicio:</label>
+                    <select id="inputService" class="custom-select col-sm-10" required>
+                      <option value="">--Seleccione una opción--</option>
                       <option value="1">Instalación de seguridad</option>
                       <option value="2">Impresión de credenciales</option>
                       <option value="3">Instalación de redes</option>
@@ -64,7 +64,9 @@
                 <div class="form-group row">
                     <label for="inputRequestBody" class="col-sm-2 col-form-label">Solicitud:</label>
                     <textarea class="form-control col-sm-10" id="inputRequestBody" rows="3"></textarea>
-                  </div>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Submit</button>
             </form>
 
             <div class="locationMap">
