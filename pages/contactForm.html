@@ -29,28 +29,28 @@
             <h1>Contáctanos</h1>
 
             <div class="form-group row">
-                <label for="inputEmail" class="col-sm-2 col-form-label">Email</label>
+                <label for="inputName" class="col-sm-2 col-form-label">Nombre:</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="inputName" placeholder="John Doe">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="inputEmail" class="col-sm-2 col-form-label">Correo:</label>
                 <div class="col-sm-10">
                     <input type="email" class="form-control" id="inputEmail" placeholder="example@gmail.com">
                 </div>
             </div>
 
             <div class="form-group row">
-                <label for="inputEmail" class="col-sm-2 col-form-label">Email</label>
+                <label for="inputPhone" class="col-sm-2 col-form-label">Teléfono:</label>
                 <div class="col-sm-10">
-                    <input type="email" class="form-control" id="inputEmail" placeholder="example@gmail.com">
+                    <input type="text" class="form-control" id="inputPhone" placeholder="(921)-###-####">
                 </div>
             </div>
 
             <div class="form-group row">
-                <label for="inputEmail" class="col-sm-2 col-form-label">Email</label>
-                <div class="col-sm-10">
-                    <input type="email" class="form-control" id="inputEmail" placeholder="example@gmail.com">
-                </div>
-            </div>
-
-            <div class="form-group row">
-                <label for="input" class="col-sm-2 col-form-label">Tipo de Servicio</label>
+                <label for="input" class="col-sm-2 col-form-label">Tipo de Servicio:</label>
                 <select id="Servicio" class="custom-select col-sm-10" required>
                   <option value="">Open this select menu</option>
                   <option value="1">Instalación de seguridad</option>
@@ -60,8 +60,14 @@
                 <!--div class="invalid-feedback">Example invalid custom select feedback</div-->
             </div>
 
-            <div class="map-container">
-                <p>Nos encontramos en:</p>
+            <div class="form-group row">
+                <label for="inputRequestBody" class="col-sm-2 col-form-label">Solicitud:</label>
+                <textarea class="form-control col-sm-10" id="inputRequestBody" rows="3"></textarea>
+              </div>
+
+            <div class="locationMap">
+                <h3>Nos ubicamos en:</h3>
+                <p>Calle 18 de Marzo #1811, Col. Puerto México, Coatzalcos, Ver</p>
                 <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d236.95685268587945!2d-94.44452055916524!3d18.149644473798805!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTjCsDA4JzU5LjAiTiA5NMKwMjYnMzkuNiJX!5e0!3m2!1sen!2smx!4v1730736893944!5m2!1sen!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </main>
