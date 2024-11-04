@@ -1,9 +1,17 @@
+:root{
+    --container-background: #f8f8f8;
+}
+
 header{
     position: sticky;
     top: 0;
     left: 0;
     width: 100vw;
     height: 130px;
+}
+
+.navbar{
+    background-color: #003366;
 }
 
 .navbar-logo {
@@ -15,12 +23,61 @@ header{
 h1{
     font-size: 3rem;
     text-align: center;
+    padding-top: 20px;
 }
 
 h2{
     font-size: 3rem;
     text-align: center;
+    padding-top: 50px;
 }
+
+.textContainer{
+    background-color: var(--container-background);
+    display: flex;
+    flex-direction: row;
+    margin: 0 20px;
+    font-size: 1.5rem;
+}
+
+.textContainer img{
+    height: 100%;
+}
+
+.paragraph{
+    padding: 30px;
+    padding-right: 5%;
+}
+
+.img-slider{
+    max-height: 300px;
+    height: 30vh;
+    background-color: var(--container-background);
+    width: 100vw;
+}
+
+.form-group{
+    padding: 0 5%;
+}
+
+.cards-wrapper {
+    display: flex;
+    justify-content: center;
+}
+.card img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.card {
+    margin: 0 0.5em;
+    box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
+    border: none;
+    border-radius: 0;
+  }
+  .carousel-inner {
+    padding: 1em;
+  }
 
 footer{
     text-align: center;
@@ -30,7 +87,7 @@ footer{
     width: 100vw;
     height: 5px;
     margin: 10px 0;
-    background-color: blue;
+    background-color: gray;
 }
 
 h4{

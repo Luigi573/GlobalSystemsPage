@@ -8,8 +8,8 @@
     </head>
     <body>
         <header>
-            <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-                <a class="navbar-brand" href="#">
+            <nav class="navbar navbar-expand-lg navbar-dark">
+                <a class="navbar-brand" href="index.html">
                     <img src="../images/logo.png" alt="Logo" height="40" class="navbar-logo">
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -17,9 +17,9 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
-                        <li class="nav-item"><a class="nav-link" href="#">Servicios</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Proyectos</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Contáctanos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="services.html">Servicios</a></li>
+                        <li class="nav-item"><a class="nav-link" href="projects.html">Proyectos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contactForm.html">Contáctanos</a></li>
                     </ul>
                 </div>
             </nav>
@@ -27,17 +27,102 @@
 
         <main>
             <h1>¿Quiénes somos?</h1>
-            <div class="aboutUsContainer">
-                <img src="" alt="">
-                <p></p>
+            <div class="textContainer">
+                <img src="../images/transparentIcon.png" alt="">
+                <div class="paragraph">
+                    <p>GLOBAL SYSTEMS le permite aprovechar al máximo los recursos tecnológicos de su empresa, realizar inversiones inteligentes y sostenibles en el tiempo.</p>
+                    <p>Con 25 años de experiencia operamos en el sureste Mexicano. Desarrollamos modelos de uso tecnológico para su equipamiento de TI, hardware y software a la medida de sus necesidades.</p>
+                    <p>No ofrecemos respuestas estándar. En su lugar, le preguntamos qué le motiva, escuchando atentamente sus necesidades. Esto nos permite adaptar una solución exactamente a su situación y deseos.</p>
+                    <p>Para lograrlo, combinamos activos con financiación individualizada y servicios adicionales que van desde la gestión de activos y la seguridad de los datos hasta la sostenibilidad, creando una solución a medida. Independiente de fabricantes y bancos. Digital, global y centralizada, todo de una sola fuente.</p>
+                    <p>Con cada desafío único al que se enfrenta, colaboramos con usted para lograr un resultado: Tecnología que puede utilizar fácilmente y de inmediato.</p>
+                </div>
             </div>
-            <h2>Servicios</h2>
-            <div class="img-slider">
 
+            <h2>Servicios</h2>
+            <div id="service-carousel" class="img-slider carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="cards-wrapper">
+                            <div class="card">
+                              <img src="..." class="card-img-top" alt="...">
+                              <div class="card-body">
+                                <h5 class="card-title">Instalación de Redes de Voz y Datos</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <a href="#" class="btn btn-primary">Ver más</a>
+                              </div>
+                            </div>
+                            <div class="card">
+                              <img src="..." class="card-img-top" alt="...">
+                              <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <a href="#" class="btn btn-primary">Ver más</a>
+                              </div>
+                            </div>
+                            <div class="card">
+                              <img src="..." class="card-img-top" alt="...">
+                              <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <a href="#" class="btn btn-primary">Ver más</a>
+                              </div>
+                            </div>
+                          </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="cards-wrapper">
+                            <div class="card">
+                              <img src="..." class="card-img-top" alt="...">
+                              <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <a href="#" class="btn btn-primary">Ver más</a>
+                              </div>
+                            </div>
+                            <div class="card">
+                              <img src="..." class="card-img-top" alt="...">
+                              <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <a href="#" class="btn btn-primary">Ver más</a>
+                              </div>
+                            </div>
+                            <div class="card">
+                              <img src="..." class="card-img-top" alt="...">
+                              <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <a href="#" class="btn btn-primary">Ver más</a>
+                              </div>
+                            </div>
+                          </div>
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
             </div>
+
             <h2>Proyectos</h2>
-            <div class="img-slider">
-                
+            <div id="service-carousel" class="img-slider carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#serviceCarousel" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                  </a>
+                  <a class="carousel-control-next" href="#serviceCarousel" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                  </a>
             </div>
         </main>
 
