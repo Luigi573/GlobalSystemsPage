@@ -28,42 +28,44 @@
         <main>
             <h1>Contáctanos</h1>
 
-            <div class="form-group row">
-                <label for="inputName" class="col-sm-2 col-form-label">Nombre:</label>
-                <div class="col-sm-10">
-                    <input type="text" class="form-control" id="inputName" placeholder="John Doe">
+            <form action="/action_page.php" method="get">
+                <div class="form-group row">
+                    <label for="inputName" class="col-sm-2 col-form-label">Nombre:</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="inputName" placeholder="John Doe">
+                    </div>
                 </div>
-            </div>
-
-            <div class="form-group row">
-                <label for="inputEmail" class="col-sm-2 col-form-label">Correo:</label>
-                <div class="col-sm-10">
-                    <input type="email" class="form-control" id="inputEmail" placeholder="example@gmail.com">
+    
+                <div class="form-group row">
+                    <label for="inputEmail" class="col-sm-2 col-form-label">Correo:</label>
+                    <div class="col-sm-10">
+                        <input type="email" class="form-control" id="inputEmail" placeholder="example@gmail.com">
+                    </div>
                 </div>
-            </div>
-
-            <div class="form-group row">
-                <label for="inputPhone" class="col-sm-2 col-form-label">Teléfono:</label>
-                <div class="col-sm-10">
-                    <input type="text" class="form-control" id="inputPhone" placeholder="(921)-###-####">
+    
+                <div class="form-group row">
+                    <label for="inputPhone" class="col-sm-2 col-form-label">Teléfono:</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="inputPhone" placeholder="(921)-###-####">
+                    </div>
                 </div>
-            </div>
-
-            <div class="form-group row">
-                <label for="input" class="col-sm-2 col-form-label">Tipo de Servicio:</label>
-                <select id="Servicio" class="custom-select col-sm-10" required>
-                  <option value="">Open this select menu</option>
-                  <option value="1">Instalación de seguridad</option>
-                  <option value="2">Impresión de credenciales</option>
-                  <option value="3">Instalación de redes</option>
-                </select>
-                <!--div class="invalid-feedback">Example invalid custom select feedback</div-->
-            </div>
-
-            <div class="form-group row">
-                <label for="inputRequestBody" class="col-sm-2 col-form-label">Solicitud:</label>
-                <textarea class="form-control col-sm-10" id="inputRequestBody" rows="3"></textarea>
-              </div>
+    
+                <div class="form-group row">
+                    <label for="input" class="col-sm-2 col-form-label">Tipo de Servicio:</label>
+                    <select id="Servicio" class="custom-select col-sm-10" required>
+                      <option value="">Open this select menu</option>
+                      <option value="1">Instalación de seguridad</option>
+                      <option value="2">Impresión de credenciales</option>
+                      <option value="3">Instalación de redes</option>
+                    </select>
+                    <!--div class="invalid-feedback">Example invalid custom select feedback</div-->
+                </div>
+    
+                <div class="form-group row">
+                    <label for="inputRequestBody" class="col-sm-2 col-form-label">Solicitud:</label>
+                    <textarea class="form-control col-sm-10" id="inputRequestBody" rows="3"></textarea>
+                  </div>
+            </form>
 
             <div class="locationMap">
                 <h3>Nos ubicamos en:</h3>
