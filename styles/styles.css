@@ -41,7 +41,7 @@ form{
     margin: 30px 0;
 }
 
-.textContainer{
+.text-container{
     background-color: var(--container-background);
     display: flex;
     flex-direction: row;
@@ -49,7 +49,7 @@ form{
     font-size: 1.5rem;
 }
 
-.textContainer img{
+.text-container img{
     height: 100%;
 }
 
@@ -118,4 +118,8 @@ footer{
 h4{
     text-transform: uppercase;
     color: blue;
+}
+
+button[type=submit]{
+    padding: auto;
 }
