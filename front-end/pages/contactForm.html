@@ -5,7 +5,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="../styles/styles.css">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.21.0/jquery.validate.min.js"></script>
         <script src="../scripts/formValidator.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     </head>
     <body>
         <header>
@@ -29,14 +34,11 @@
         <main>
             <h1>Contáctanos</h1>
 
-            <form id="contactForm" action="#" method="POST" novalidate>
+            <form name="contactForm" id="contactForm" action="index.html" novalidate="novalidate">
                 <div class="form-group row">
                     <label for="inputName" class="col-sm-2 col-form-label">Nombre:</label>
                     <div class="col-sm-10">
                         <input type="text" class="form-control" id="inputName" placeholder="John Doe" required>
-                        <div class="invalid-feedback">
-                            Escriba su nombre
-                        </div>
                     </div>
                 </div>
     
@@ -44,9 +46,6 @@
                     <label for="inputEmail" class="col-sm-2 col-form-label">Correo:</label>
                     <div class="col-sm-10">
                         <input type="email" class="form-control" id="inputEmail" placeholder="example@gmail.com" required>
-                        <div class="invalid-feedback">
-                            Ingrese un correo válido
-                        </div>
                     </div>
                 </div>
     
@@ -54,30 +53,26 @@
                     <label for="inputPhone" class="col-sm-2 col-form-label">Teléfono:</label>
                     <div class="col-sm-10">
                         <input type="text" class="form-control" id="inputPhone" placeholder="9214764568" required>
-                        <div class="invalid-feedback">
-                            Por favor ingrese un teléfono válido
-                        </div>
                     </div>
                 </div>
     
                 <div class="form-group row">
                     <label for="inputService" class="col-sm-2 col-form-label">Tipo de Servicio:</label>
-                    <select id="inputService" class="custom-select col-sm-10" required>
-                      <option value="">--Seleccione una opción--</option>
-                      <option value="1">Instalación de seguridad</option>
-                      <option value="2">Impresión de credenciales</option>
-                      <option value="3">Instalación de redes</option>
-                    </select>
-                    <div class="invalid-feedback">
-                        Seleccione un servicio
+                    <div class="col-sm-10">
+                        <select id="inputService" class="custom-select">
+                            <option value="">--Seleccione una opción--</option>
+                            <option value="1">Instalación de seguridad</option>
+                            <option value="2">Impresión de credenciales</option>
+                            <option value="3">Instalación de redes</option>
+                        </select>
                     </div>
+                    
                 </div>
     
                 <div class="form-group row">
                     <label for="inputRequestBody" class="col-sm-2 col-form-label">Solicitud:</label>
-                    <textarea class="form-control col-sm-10" id="inputRequestBody" rows="3"></textarea>
-                    <div class="invalid-feedback">
-                        Escriba su solicitud
+                    <div class="col-sm-10">
+                        <textarea class="form-control" id="inputRequestBody" rows="5"  required></textarea>
                     </div>
                 </div>
 
@@ -88,7 +83,7 @@
 
             <div class="locationMap">
                 <h3>Nos ubicamos en:</h3>
-                <p>Calle 18 de Marzo #1811, Col. Puerto México, Coatzalcos, Ver</p>
+                <p>Calle 18 de Marzo #1811, Col. Puerto México, Coatzacoalcos, Ver</p>
                 <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d236.95685268587945!2d-94.44452055916524!3d18.149644473798805!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTjCsDA4JzU5LjAiTiA5NMKwMjYnMzkuNiJX!5e0!3m2!1sen!2smx!4v1730736893944!5m2!1sen!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </main>
@@ -97,13 +92,8 @@
             <div class="footer-line"></div>
             <h4>consultores & integradores de tecnnologías</h4>
             <p>Jorge Iván Olivares San Román RFC: OISJ790930-PS7</p>
-            <p>Calle 18 de Marzo #1811, Col. Puerto México, Coatzalcos, Ver. CP:96510.</p>
+            <p>Calle 18 de Marzo #1811, Col. Puerto México, Coatzacoalcos, Ver. CP:96510.</p>
             <p>Tel.(921) 240-7749, jorge@inti.com.mx</p>
         </footer>
-
-         <!-- jQuery and Bootstrap JS -->
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     </body>
 </html>
