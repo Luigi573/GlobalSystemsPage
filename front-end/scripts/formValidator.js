@@ -53,6 +53,7 @@ $(document).ready(function() {
         
         submitHandler: function (form) {
             alert("Formulario validado correctamente. Procesando...");
+            form.submit();
         }
     });
 });

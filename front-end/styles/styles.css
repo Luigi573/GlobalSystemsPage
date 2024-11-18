@@ -97,6 +97,11 @@ form{
     transform: translateY(-50%);
 }
 
+label.is-invalid{
+    font-weight: 300;
+    color: red;
+}
+
 .locationMap{
     margin: auto;
     text-align: center;
