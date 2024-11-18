@@ -46,6 +46,10 @@ $(document).ready(function() {
                 required: "Por favor ingrese su solicitud."
             }
         },
+
+        validClass: "is-valid",  // When field is valid, add the 'is-valid' class
+        errorClass: "is-invalid",  // When field is invalid, add the 'is-invalid' class
+
         
         submitHandler: function (form) {
             alert("Formulario validado correctamente. Procesando...");
