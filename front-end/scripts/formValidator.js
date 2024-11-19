@@ -47,10 +47,10 @@ $(document).ready(function() {
             }
         },
 
-        validClass: "is-valid",  // When field is valid, add the 'is-valid' class
-        errorClass: "is-invalid",  // When field is invalid, add the 'is-invalid' class
+        //Switch between bootstrap classes
+        validClass: "is-valid",  
+        errorClass: "is-invalid",  
 
-        
         submitHandler: function (form) {
             alert("Formulario validado correctamente. Procesando...");
             form.submit();
