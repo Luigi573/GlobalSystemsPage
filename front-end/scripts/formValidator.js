@@ -49,7 +49,7 @@ $(document).ready(function() {
 
         //Switch between bootstrap classes
         validClass: "is-valid",  
-        errorClass: "is-invalid",  
+        errorClass: "is-invalid",   
 
         submitHandler: function (form) {
             alert("Formulario validado correctamente. Procesando...");

@@ -107,6 +107,10 @@ label.is-invalid{
     color: red;
 }
 
+#project-carousel img{
+    max-height: 800px;
+}
+
 .locationMap{
     margin: auto;
     text-align: center;
