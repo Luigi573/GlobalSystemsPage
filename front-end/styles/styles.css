@@ -60,11 +60,10 @@ form{
     padding-right: 5%;
     color:white;
     text-shadow: black 6px;
-    
 }
 
 .img-slider{
-    background-color: var(--container-background);
+    border: 1px solid gray;
 }
 
 .form-group{
