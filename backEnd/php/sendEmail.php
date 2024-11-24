@@ -7,8 +7,8 @@ header("Access-Control-Allow-Headers: Content-Type");
 header("Cache-Control: no-cache, no-store, must-revalidate");
 header("Pragma: no-cache");
 header("Expires: 0");
-header("Content-Type: application/json; charset=utf-8");
-//header('Content-Type: text/html; charset=utf-8');
+//header("Content-Type: application/json; charset=utf-8");
+header('Content-Type: text/html; charset=utf-8');
 
 
 error_reporting(E_ALL);
@@ -19,14 +19,12 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    // Sanitize inputs
     $inputName = strip_tags(filter_input(INPUT_POST, 'inputName', FILTER_SANITIZE_FULL_SPECIAL_CHARS));
     $inputEmail = filter_input(INPUT_POST, 'inputEmail', FILTER_SANITIZE_EMAIL);
     $inputPhone = strip_tags(filter_input(INPUT_POST, 'inputPhone', FILTER_SANITIZE_FULL_SPECIAL_CHARS));
-    $inputService = filter_input(INPUT_POST, 'inputService', FILTER_SANITIZE_NUMBER_INT);
-    $inputRequestBody = strip_tags(filter_input(INPUT_POST, 'inputRequestBody', FILTER_SANITIZE_FULL_SPECIAL_CHARS));
+    $inputService = html_entity_decode(strip_tags(filter_input(INPUT_POST, 'inputService', FILTER_SANITIZE_FULL_SPECIAL_CHARS)));
+    $inputRequestBody = html_entity_decode(strip_tags(filter_input(INPUT_POST, 'inputRequestBody', FILTER_SANITIZE_FULL_SPECIAL_CHARS)));
 
-    // 4. Validate the email
     if (!filter_var($inputEmail, FILTER_VALIDATE_EMAIL)) {
         http_response_code(400);
         error_log("El correo no es válido.");
