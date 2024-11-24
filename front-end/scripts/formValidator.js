@@ -51,9 +51,26 @@ $(document).ready(function() {
         errorClass: "is-invalid",  // When field is invalid, add the 'is-invalid' class
 
         
-        submitHandler: function (form) {
-            alert("Formulario validado correctamente. Procesando...");
-            form.submit();
+        submitHandler: function (form) {        
+            // Get form data
+            var formData = $(form).serialize();
+        
+            // Send data via AJAX to the backend
+            $.ajax({
+                url: "http://localhost:8000/sendEmail.php", 
+                type: "POST",
+                data: formData,
+                success: function(response) {
+                    alert("Correo enviado exitosamente");
+                    form.reset(); 
+                    window.location.href = "index.html";
+                },
+                error: function(response) {
+                    alert("Hubo un error al enviar el formulario. \n");
+                    console.log(response);
+                }
+            });
         }
+        
     });
 });
