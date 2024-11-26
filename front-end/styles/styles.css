@@ -23,19 +23,20 @@ header{
 }
 
 main{
-    padding: 0 10%;
+    padding: 0 15vw;
 }
 
 h1{
-    font-size: 3rem;
+    font-size: 4rem;
     text-align: center;
     padding-top: 20px;
 }
 
 h2{
-    font-size: 3rem;
+    font-size: 2rem;
     text-align: center;
-    padding-top: 50px;
+    padding-top: 30px;
+    padding-bottom: 50px;
 }
 
 form{
@@ -72,6 +73,7 @@ section > img{
 
 .paragraph{
     text-shadow: black 6px;
+    font-size: 1.5rem;
 } 
 
 .img-slider{
