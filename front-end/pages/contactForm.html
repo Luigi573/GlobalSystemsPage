@@ -33,7 +33,7 @@
         <main>
             <h1>Contáctanos</h1>
 
-            <form id="contactForm" name="contactForm" action="index.html" novalidate>
+            <form id="contactForm" name="contactForm" action="http://localhost:8000/sendEmail.php" method="POST" novalidate>
                 <div class="form-group row">
                     <label for="inputName" class="col-sm-2 col-form-label">Nombre:</label>
                     <div class="col-sm-10">
@@ -63,9 +63,9 @@
                     <div class="col-sm-10">
                         <select id="inputService" name="inputService" class="custom-select">
                             <option value="">--Seleccione una opción--</option>
-                            <option value="1">Instalación de seguridad</option>
-                            <option value="2">Impresión de credenciales</option>
-                            <option value="3">Instalación de redes</option>
+                            <option value="Instalación de seguridad">Instalación de seguridad</option>
+                            <option value="Impresión de credenciales">Impresión de credenciales</option>
+                            <option value="Instalación de redes">Instalación de redes</option>
                         </select>
                         <div class="invalid-feedback"></div>
                     </div>
