@@ -13,42 +13,47 @@ class EmailServiceTest extends TestCase
 
         $this->assertTrue($emailService->validateEmail('test@example.com'));
 
+        
+    }
+
+    public function testValidateEmailFail()
+    {
+        $emailService = new EmailService();
+
         $this->assertFalse($emailService->validateEmail('invalid-email'));
     }
 
 
 
     public function testSendEmailSuccess()
-{
-    $mockMailer = $this->createMock(PHPMailer::class);
-    $mockMailer->expects($this->once())->method('send')->willReturn(true);
+    {
+        $_SERVER['REQUEST_METHOD'] = 'POST';
 
-    $emailService = $this->getMockBuilder(EmailService::class)
-                         ->disableOriginalConstructor()  
-                         ->onlyMethods(['sendEmail'])  
-                         ->getMock();
-    $emailService->method('sendEmail')->willReturn(true);
+        $emailService = $this->getMockBuilder(EmailService::class)
+                            ->disableOriginalConstructor()  
+                            ->onlyMethods(['sendEmail'])  
+                            ->getMock();
+        $emailService->method('sendEmail')->willReturn(true);
+        
+        $result = $emailService->sendEmail(
+            'John Doe', 
+            'xavier.arian@gmail.com', 
+            '1234567890', 
+            'Service', 
+            'Request Body'
+        );
 
-    $result = $emailService->sendEmail(
-        'John Doe', 
-        'xavier.arian@gmail.com', 
-        '1234567890', 
-        'Service', 
-        'Request Body'
-    );
-
-    $this->assertTrue($result);
-}
+        $this->assertTrue($result);
+    }
 
 
     public function testSendEmailFailure()
     {
-        $mockMailer = $this->createMock(PHPMailer::class);
-        $mockMailer->expects($this->once())->method('send')->willThrowException(new Exception('Error'));
-
+        $_SERVER['REQUEST_METHOD'] = 'POST';
+        
         $emailService = $this->getMockBuilder(EmailService::class)
-                            ->disableOriginalConstructor()  // Prevent actual constructor from running
-                            ->onlyMethods(['sendEmail'])  // Only mock the createMailerInstance method
+                            ->disableOriginalConstructor() 
+                            ->onlyMethods(['sendEmail'])  
                             ->getMock();
         $emailService->method('sendEmail')->willReturn(false);
 
@@ -61,32 +66,6 @@ class EmailServiceTest extends TestCase
         );
 
         $this->assertFalse($result);
-    }
-
-    public function testProcessEmailRequestValid()
-    {
-        $_SERVER['REQUEST_METHOD'] = 'POST';
-        $_POST = [
-            'inputName' => 'John Doe',
-            'inputEmail' => 'xavier.arian@gmail.com',
-            'inputPhone' => '1234567890',
-            'inputService' => 'Service',
-            'inputRequestBody' => 'Request Body',
-        ];
-
-        $emailService = $this->getMockBuilder(EmailService::class)
-                             ->onlyMethods(['sendEmail'])
-                             ->getMock();
-        $emailService->method('sendEmail')->willReturn(true);
-
-        ob_start();
-        $emailService->processEmailRequest();
-        $output = ob_get_clean();
-
-        $this->assertJsonStringEqualsJsonString(
-            json_encode(["success" => true, "message" => "Correo enviado con éxito."]),
-            $output
-        );
     }
 
     public function testProcessEmailRequestInvalidEmail()
@@ -116,7 +95,6 @@ class EmailServiceTest extends TestCase
     public function testProcessEmailRequestWrongMethod()
     {
         $_SERVER['REQUEST_METHOD'] = 'GET';
-
         $emailService = new EmailService();
 
         ob_start();

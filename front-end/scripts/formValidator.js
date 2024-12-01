@@ -52,22 +52,20 @@ $(document).ready(function() {
 
         
         submitHandler: function (form) {        
-            // Get form data
             var formData = $(form).serialize();
         
-            // Send data via AJAX to the backend
             $.ajax({
-                url: "http://localhost:8000/sendEmail.php", 
+                url: "http://localhost:8000/EmailService.php", 
                 type: "POST",
                 data: formData,
-                success: function(response) {
+                success: function() {
                     alert("Correo enviado exitosamente");
                     form.reset(); 
                     window.location.href = "index.html";
                 },
                 error: function(response) {
-                    alert("Hubo un error al enviar el formulario. \n");
                     console.log(response);
+                    alert("Hubo un error al enviar el formulario. \n");
                 }
             });
         }
