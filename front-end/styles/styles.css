@@ -3,6 +3,13 @@
     overflow-x: hidden;
 }
 
+@media (max-width: 1200px) {
+    .text-container img {
+        height: 0;
+        width: 0;
+    }
+}
+
 header{
     position: sticky;
     top: 0;
