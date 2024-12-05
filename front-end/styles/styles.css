@@ -135,6 +135,7 @@ label.is-invalid{
 footer{
     text-align: center;
     max-height: 200px;
+    width: 100%;
 }
 
 .footer-line{
