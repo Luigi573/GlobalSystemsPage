@@ -3,19 +3,13 @@
     overflow-x: hidden;
 }
 
-@media (max-width: 1200px) {
-    .text-container img {
-        height: 0;
-        width: 0;
-    }
-}
-
 header{
     position: sticky;
     top: 0;
     left: 0;
-    width: 100vw;
-    height: 130px;
+    width: 100%;
+    height: 10%;
+    max-height: 150px;
     z-index: 1;
 }
 
@@ -66,6 +60,7 @@ section > img{
     font-size: 1.5rem;
     padding: 5%;
     background-blend-mode: lighten;
+    color: white;
 }
 
 .text-container img {
@@ -74,14 +69,8 @@ section > img{
     object-fit: contain; 
 }
 
-
 .paragraph{
-    text-shadow: black 6px;
     font-size: 1.5rem;
-} 
-
-.img-slider{
-    border: 1px solid gray;
 }
 
 .form-group{
@@ -89,25 +78,27 @@ section > img{
 }
 
 .cards-wrapper {
-    display: flex;
     justify-content: center;
+    padding: 1em;
 }
+
 .card img {
     max-width: 100%;
-    max-height: 100%;
-    height: 11em;
+    height: 11em; 
+    object-fit: cover; 
 }
 
 .card {
-    margin: 0 2%;
-    box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
+    margin: 5% 2%; 
+    box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18); 
     border: none;
     border-radius: 0;
-    max-width: 350px;
+    max-width: 350px; 
 }
 
 .carousel-inner {
     padding: 1em;
+    border: 1px solid gray;
 }
 
 .carousel-control-prev, .carousel-control-next {
@@ -164,4 +155,14 @@ h4{
 
 button[type=submit]{
     padding: auto;
+}
+
+@media (max-width: 1200px) {
+    main{
+        padding: 0 5%;
+    }
+    .text-container img {
+        height: 0;
+        width: 0;
+    }
 }
