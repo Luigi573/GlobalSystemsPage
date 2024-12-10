@@ -11,6 +11,8 @@ A website made for the company **Global Systems** to help them display their wor
   - Offers a detailed summary of the various services provided by the company.
 - **Projects:**
   - Includes a photo gallery showcasing completed projects by the company.
+  - **Contact Us**
+  - Form that lets the user send an email to the company in order to request a service. It sends a CC to the sender
 
 ## Running the Website Locally
 
