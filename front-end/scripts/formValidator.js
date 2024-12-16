@@ -55,7 +55,7 @@ $(document).ready(function() {
             var formData = $(form).serialize();
         
             $.ajax({
-                url: "http://localhost:8000/EmailService.php", 
+                url: "../../backEnd/php/EmailService.php", 
                 type: "POST",
                 data: formData,
                 success: function() {
@@ -65,7 +65,7 @@ $(document).ready(function() {
                 },
                 error: function(response) {
                     console.log(response);
-                    alert("Hubo un error al enviar el formulario. \n");
+                    alert("Error al enviar el correo, no se pudo establecer conexión con el servidor");
                 }
             });
         }
